@@ -1,1 +1,21 @@
 // Mixins in here
+.custom-layout(@justify, @align){
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+.customMainMargin(){
+	max-width:800px;
+	width:100%;
+	margin-left:@mainMarginLeft;
+}
+
+.customMobileColumn(){
+	@mobile @phone-width {
+		display:flex;
+		flex-direction:column;
+		justify-content: center;
+		align-items:center;
+		flex-wrap:none;
+	}
+}
